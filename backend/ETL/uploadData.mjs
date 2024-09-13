@@ -2,8 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 import fetch from "node-fetch";
 
 // Supabase configuration
-const SUPABASE_URL = "https://whjrizjiocucfprnvuky.supabase.co";
-const SUPABASE_KEY = "YOUR_SUPABASE_KEY_HERE";
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // Function to fetch products from FakeStoreAPI
